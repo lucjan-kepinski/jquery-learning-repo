@@ -76,6 +76,7 @@
 // $("header .wrapper").removeClass("wrapper")
 // $("header > div").addClass("wrapper ")
 
+$(window).load(function(){
 var button = $("#lead-banner a");
 
 button[0].onclick = function(){
@@ -83,15 +84,7 @@ button[0].onclick = function(){
     return false;
 }
 
-// var myLis = $("#points-of-sale li")
-
-// myLis.on("click", function(){
-//     $(this).css({"background": "red"})
-
-//     myLis.off("click")
-// })
-
 $("#lead-banner").dblclick(function(){
     alert("you double clicked")
     $("#lead-banner").off("dblclick")
-})
+})})
