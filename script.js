@@ -82,3 +82,11 @@ button[0].onclick = function(){
     $("#points-of-sale").toggleClass("open")
     return false;
 }
+
+var myLis = $("#points-of-sale li")
+
+myLis.on("click", function(){
+    $(this).css({"background": "red"})
+
+    myLis.off("click")
+})
