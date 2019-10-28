@@ -76,15 +76,13 @@
 // $("header .wrapper").removeClass("wrapper")
 // $("header > div").addClass("wrapper ")
 
-$(window).load(function(){
-var button = $("#lead-banner a");
+$(function(){
+$("*").on("click", function(e){
+    console.log(e.target);
+    console.log("The event is " + e.type);
+    console.log("X coordinate of the event is " + e.pageX)
+    console.log("Y coordinate of the event is " + e.pageY)
+    e.stopPropagation();
+})
 
-button[0].onclick = function(){
-    $("#points-of-sale").toggleClass("open")
-    return false;
-}
-
-$("#lead-banner").dblclick(function(){
-    alert("you double clicked")
-    $("#lead-banner").off("dblclick")
-})})
+})
