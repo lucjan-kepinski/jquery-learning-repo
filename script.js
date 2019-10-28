@@ -83,10 +83,15 @@ button[0].onclick = function(){
     return false;
 }
 
-var myLis = $("#points-of-sale li")
+// var myLis = $("#points-of-sale li")
 
-myLis.on("click", function(){
-    $(this).css({"background": "red"})
+// myLis.on("click", function(){
+//     $(this).css({"background": "red"})
 
-    myLis.off("click")
+//     myLis.off("click")
+// })
+
+$("#lead-banner").dblclick(function(){
+    alert("you double clicked")
+    $("#lead-banner").off("dblclick")
 })
