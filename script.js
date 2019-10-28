@@ -43,18 +43,22 @@
 // $("section").unwrap();
 // $("section").wrapAll("<div>");
 
-var wrapper = "<div class='wrapper'>";
-var button = $(".button");
-var wrapped = true;
+// var wrapper = "<div class='wrapper'>";
+// var button = $(".button");
+// var wrapped = true;
 
-button[0].onclick = function() {
-  if (wrapped) {
-    $("section").unwrap();
-    wrapped = false;
-    button.text("wrap");
-  } else {
-    $("section").wrapAll(wrapper);
-    wrapped = true;
-    button.text("unwrap");
-  }
-};
+// button[0].onclick = function() {
+//   if (wrapped) {
+//     $("section").unwrap();
+//     wrapped = false;
+//     button.text("wrap");
+//   } else {
+//     $("section").wrapAll(wrapper);
+//     wrapped = true;
+//     button.text("unwrap");
+//   }
+// };
+
+$(".button").remove();
+$("#points-of-sale").empty();
+$("#contact img").remove()
