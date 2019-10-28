@@ -35,7 +35,26 @@
 // .next().css({border: "3px solid green"})
 // .closest("section").css({border: "3px solid purple"})
 
-var tweet = "The big fight live: Ham vs Cheese!";
+// var tweet = "The big fight live: Ham vs Cheese!";
 
-$('#tweets div').text(tweet)
+// $('#tweets div').text(tweet)
 
+// $("section").wrap("<div>");
+// $("section").unwrap();
+// $("section").wrapAll("<div>");
+
+var wrapper = "<div class='wrapper'>";
+var button = $(".button");
+var wrapped = true;
+
+button[0].onclick = function() {
+  if (wrapped) {
+    $("section").unwrap();
+    wrapped = false;
+    button.text("wrap");
+  } else {
+    $("section").wrapAll(wrapper);
+    wrapped = true;
+    button.text("unwrap");
+  }
+};
