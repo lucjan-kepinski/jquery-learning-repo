@@ -59,6 +59,16 @@
 //   }
 // };
 
-$(".button").remove();
-$("#points-of-sale").empty();
-$("#contact img").remove()
+// $(".button").remove();
+// $("#points-of-sale").empty();
+// $("#contact img").remove()
+
+// $("#contact img").removeAttr("alt")
+// console.log($("#contact img").attr("alt"))
+
+$("#social-nav").css({
+    "top": "-400px",
+    "left": "150px",
+    "opacity": "0.5",
+    "border-top": "4px solid red"
+})
