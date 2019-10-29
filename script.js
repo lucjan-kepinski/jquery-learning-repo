@@ -88,10 +88,5 @@
 // })
 
 $(document).ready(function() {
-    let items = $("#points-of-sale li");
-
-    items.on("click", () => {
-        $(this).find("#points-of-sale p").slideToggle(500)
-    }
-    )
+    $(".rslides").responsiveSlides();
 });
