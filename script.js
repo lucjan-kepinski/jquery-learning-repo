@@ -87,20 +87,20 @@
 
 // })
 
-$(document).ready(function(){
+$(document).ready(function() {
+  let allQuotes = $("blockquote");
+  let currentQuote = 0;
 
-    $(".slide-button-up").on("click", function(){
-        $("#lead-banner").slideUp(3000)
+  function changeQuote() {
+    $(allQuotes[currentQuote]).fadeOut(200, () => {
+      {currentQuote == allQuotes.length - 1 ?
+        currentQuote = 0
+        :
+        currentQuote++;}
 
-    })
+      $(allQuotes[currentQuote]).fadeIn(200);
+    });
+  }
 
-    $(".slide-button-down").on("click", function(){
-        $("#lead-banner").slideDown(100, () => alert("The animation has ended."))
-
-    })
-
-    $(".slide-button-downorup").on("click", function(){
-        $("#lead-banner").slideToggle(1000, () => alert("toggle animation complete"))
-
-    })
-})
+  var quoteTimer = setInterval(changeQuote, 3000)
+});
