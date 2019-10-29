@@ -88,19 +88,10 @@
 // })
 
 $(document).ready(function() {
-  let allQuotes = $("blockquote");
-  let currentQuote = 0;
+    let items = $("#points-of-sale li");
 
-  function changeQuote() {
-    $(allQuotes[currentQuote]).fadeOut(200, () => {
-      {currentQuote == allQuotes.length - 1 ?
-        currentQuote = 0
-        :
-        currentQuote++;}
-
-      $(allQuotes[currentQuote]).fadeIn(200);
-    });
-  }
-
-  var quoteTimer = setInterval(changeQuote, 3000)
+    items.on("click", () => {
+        $(this).find("#points-of-sale p").slideToggle(500)
+    }
+    )
 });
