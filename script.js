@@ -76,13 +76,26 @@
 // $("header .wrapper").removeClass("wrapper")
 // $("header > div").addClass("wrapper ")
 
-$(function(){
-$("*").on("click", function(e){
-    console.log(e.target);
-    console.log("The event is " + e.type);
-    console.log("X coordinate of the event is " + e.pageX)
-    console.log("Y coordinate of the event is " + e.pageY)
-    e.stopPropagation();
-})
+// $(function(){
+// $("*").on("click", function(e){
+//     console.log(e.target);
+//     console.log("The event is " + e.type);
+//     console.log("X coordinate of the event is " + e.pageX)
+//     console.log("Y coordinate of the event is " + e.pageY)
+//     e.stopPropagation();
+// })
+
+// })
+
+$(document).ready(function(){
+
+    function complete(){ alert("Animation complete")}
+
+    $("section > h2").on("click", function(){
+
+        $(this).animate({"widrh": "500px", "height": "100px"}, 4000, "linear", complete)
+
+
+    })
 
 })
